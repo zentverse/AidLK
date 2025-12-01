@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Send Aid – Dashboard – AidLK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <button class="link" onclick="location.href='index.html'">&larr; Back</button>
+            <h1>Send Aid – Dashboard</h1>
+        </header>
+
+        <div class="card">
+            <h2>Summary</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Total Requests</span>
+                    <span class="stat-value" id="stat-total">–</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Pending</span>
+                    <span class="stat-value" id="stat-pending">–</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Partial</span>
+                    <span class="stat-value" id="stat-partial">–</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value" id="stat-completed">–</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Most Requested Items</h2>
+                <ul id="top-items-list" class="simple-list"></ul>
+            </div>
+
+            <div class="card">
+                <h2>Locations with Highest Need</h2>
+                <ul id="top-locations-list" class="simple-list"></ul>
+            </div>
+        </div>
+
+        <p class="note">
+            Use this dashboard to decide what items to send and which locations to prioritize.
+        </p>
+    </div>
+
+    <script src="./assets/dashboard.js"></script>
+</body>
+
+</html>

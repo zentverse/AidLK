@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Receive Aid – AidLK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <button class="link" onclick="location.href='index.html'">&larr; Back</button>
+            <h1>Receive Aid</h1>
+        </header>
+
+        <div class="tabs">
+            <button id="tab-request" class="tab active">Request Aid</button>
+            <button id="tab-update" class="tab">Update Status</button>
+        </div>
+
+        <!-- Request Aid form -->
+        <section id="request-section">
+            <div class="card">
+                <h2>New Aid Request</h2>
+                <label>NIC
+                    <input type="text" id="nic-input" placeholder="e.g. 123456789V">
+                </label>
+
+                <label>Phone (optional)
+                    <input type="tel" id="phone-input" placeholder="e.g. 07XXXXXXXX">
+                </label>
+
+                <label>Location
+                    <select id="location-select">
+                        <option value="">Select location</option>
+                        <option value="Colombo">Colombo</option>
+                        <option value="Gampaha">Gampaha</option>
+                        <option value="Kalutara">Kalutara</option>
+                        <option value="Galle">Galle</option>
+                        <option value="Matara">Matara</option>
+                        <option value="Kandy">Kandy</option>
+                        <!-- add more as needed -->
+                    </select>
+                </label>
+
+                <h3>Requested Items</h3>
+                <div id="items-container"></div>
+
+                <button class="btn secondary" id="add-item-btn">+ Add Item</button>
+
+                <button class="btn primary" id="submit-request-btn">
+                    Submit Request
+                </button>
+
+                <p id="request-message" class="message"></p>
+            </div>
+        </section>
+
+        <!-- Update status section -->
+        <section id="update-section" class="hidden">
+            <div class="card">
+                <h2>Update My Aid Status</h2>
+                <label>NIC
+                    <input type="text" id="update-nic-input" placeholder="Enter your NIC">
+                </label>
+                <button class="btn primary" id="fetch-requests-btn">Find My Requests</button>
+                <p id="update-message" class="message"></p>
+            </div>
+
+            <div id="requests-list"></div>
+        </section>
+    </div>
+
+    <script src="./assets/receive.js"></script>
+</body>
+
+</html>
